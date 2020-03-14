@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 40rem;
+  padding-bottom: 40rem;
+  background-color: #151f6d;
+}
+
+.footer__contacts {
+  display: flex;
+  width: 100%;
+  margin-bottom: 40rem;
+}
+
+.footer__contacts .socials {
+  margin-right: 154rem;
+}
+
+.footer__menu {
+  margin-bottom: 31rem;
+}
+
+.footer__menu .form {
+  margin-bottom: 32rem;
+}
+
+@media (max-width: $width-tablet - 1) {
+  .footer__contacts {
+    flex-direction: column;
+    margin-bottom: 16rem;
+  }
+
+  .footer__contacts .socials {
+    margin-right: 0;
+    margin-bottom: 25rem;
+  }
+}

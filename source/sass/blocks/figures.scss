@@ -1,0 +1,59 @@
+.figures__title {
+  font-family: $font-default;
+  font-size: 40rem;
+  font-weight: 700;
+  font-style: inherit;
+  line-height: 1;
+  color: #94b0be;
+  margin-bottom: 8rem;
+}
+
+.figures__description {
+  max-width: 215rem;
+  font-family: $font-default;
+  font-size: 14rem;
+  font-weight: 500;
+  font-style: inherit;
+  color: #94b0be;
+  margin: 0;
+}
+
+@media (max-width: $width-desktop - 1) {
+  .figures__title {
+    font-family: $font-default;
+    font-size: 40rem;
+    font-weight: 700;
+    font-style: inherit;
+    line-height: 1;
+    color: #94b0be;
+    margin-bottom: 8rem;
+  }
+
+  .figures__description {
+    max-width: 215rem;
+    font-family: $font-default;
+    font-size: 13rem;
+    font-weight: 500;
+    font-style: inherit;
+    line-height: 1.38;
+    color: #94b0be;
+    margin: 0;
+  }
+}
+
+@media (max-width: $width-tablet - 1) {
+  .figures {
+    margin-bottom: 24rem;
+  }
+
+  .figures__title {
+    font-size: 24rem;
+    line-height: 1;
+  }
+
+  .figures__description {
+    max-width: unset;
+    font-size: 12rem;
+    line-height: 1.5;
+  }
+}

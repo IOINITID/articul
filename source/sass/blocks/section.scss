@@ -1,0 +1,139 @@
+.section {
+  width: 810rem;
+  margin-left: 525rem;
+}
+
+.section__title {
+  font-family: $font-default;
+  font-size: 34rem;
+  font-weight: 700;
+  font-style: inherit;
+  line-height: 1.18;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 32rem;
+}
+
+.section__description {
+  font-family: $font-default;
+  font-size: 14rem;
+  font-weight: 400;
+  font-style: inherit;
+  line-height: 1.71;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 64rem;
+}
+
+.section__description--hidden {
+  height: 216rem;
+  overflow: hidden;
+}
+
+.section__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 26rem;
+}
+
+.section__item {
+  width: 390rem;
+  height: auto;
+  border: solid 1rem #e8e8e9;
+  margin-right: 30rem;
+  margin-bottom: 30rem;
+}
+
+.section__item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.section .container {
+  padding: 0;
+}
+
+.section--organizations .controls {
+  margin-bottom: 104rem;
+}
+
+@media (max-width: $width-desktop - 1) {
+  .section {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .section__title {
+    font-family: $font-default;
+    font-size: 27rem;
+    font-weight: 700;
+    font-style: inherit;
+    line-height: 1.19;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 24rem;
+  }
+
+  .section__description {
+    font-family: $font-default;
+    font-size: 13rem;
+    font-weight: 400;
+    font-style: inherit;
+    line-height: 1.85;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 56rem;
+  }
+
+  .section__list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10rem;
+  }
+
+  .section__item {
+    width: 320rem;
+    height: auto;
+    border: solid 1rem #e8e8e9;
+    margin-right: 30rem;
+    margin-bottom: 30rem;
+  }
+
+  .section__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .section .container {
+    padding-left: 30rem;
+    padding-right: 30rem;
+  }
+
+  .section--organizations .controls {
+    margin-bottom: 40rem;
+  }
+}
+
+@media (max-width: $width-tablet - 1) {
+  .section__title {
+    font-size: 22rem;
+    line-height: 1.27;
+    margin-bottom: 20rem;
+  }
+
+  .section__description {
+    font-size: 12rem;
+    line-height: 2;
+    margin-bottom: 32rem;
+  }
+
+  .section__item {
+    margin-right: 0;
+    margin-bottom: 20rem;
+  }
+
+  .section .container {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+}

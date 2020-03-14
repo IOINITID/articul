@@ -1,0 +1,63 @@
+.logo {
+  width: 206rem;
+  height: 161rem;
+  margin-bottom: 40rem;
+}
+
+.logo__icon {
+  width: 206rem;
+  height: 161rem;
+  position: fixed;
+}
+
+.logo__mobile {
+  display: none;
+}
+
+@media (max-width: $width-desktop - 1) {
+  .logo {
+    width: 206rem;
+    height: 161rem;
+    margin-bottom: 10rem;
+  }
+
+  .logo__icon {
+    width: 206rem;
+    height: 161rem;
+    position: unset;
+  }
+
+  .logo__mobile {
+    display: none;
+  }
+}
+
+@media (max-width: $width-tablet - 1) {
+  .logo__icon {
+    display: none;
+  }
+
+  .logo {
+    width: auto;
+    height: 38rem;
+    text-decoration: none;
+  }
+
+  .logo__mobile {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 38px;
+    font-family: $font-default;
+    font-size: 16rem;
+    font-weight: 700;
+    font-style: inherit;
+    color: #e00640;
+  }
+
+  .logo__mobile-special {
+    color: #151f6d;
+  }
+}
+
+

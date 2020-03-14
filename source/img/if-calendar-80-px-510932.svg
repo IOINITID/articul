@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>32D17599-194A-463F-91A6-C94B68812EF2</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main/menu_black" transform="translate(-192.000000, -14.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="if_calendar-80px_510932" transform="translate(192.000000, 14.000000)">
+                <path d="M18.4,2.0188 L16,2.0188 L16,0 L14,0 L14,2.0188 L6,2.0188 L6,0 L4,0 L4,2.0188 L1.6324,2.0188 C0.7488,2.0188 0.0324,2.7352 0.0324,3.6188 L0.0324,18.4 C0.0324,19.2836 0.7488,20 1.6324,20 L18.4,20 C19.2836,20 20,19.2836 20,18.4 L20,3.6188 C20,2.7352 19.2836,2.0188 18.4,2.0188 Z M18,18 L2,18 L2,8 L18,8 L18,18 Z M18,6 L2,6 L2,4 L18,4 L18,6 Z" id="Shape"></path>
+                <rect id="Rectangle-path" x="9.2" y="10" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="13.2" y="10" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="9.2" y="14" width="2" height="2"></rect>
+                <rect id="Rectangle-path" x="5.2" y="14" width="2" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

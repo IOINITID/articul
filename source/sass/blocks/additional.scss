@@ -1,0 +1,55 @@
+.additional {
+  @include list-reset;
+  display: flex;
+  width: 425rem;
+  margin-left: auto;
+}
+
+.additional__item {
+  margin-right: 28rem;
+}
+
+.additional__item:last-child {
+  margin-right: 0;
+}
+
+.additional__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: $font-default;
+  font-size: 13rem;
+  font-style: inherit;
+  font-weight: 500;
+  line-height: 3.69;
+  color: #000000;
+  text-decoration: none;
+}
+
+.additional__icon {
+  margin-right: 16rem;
+}
+
+.additional__title {
+  margin: 0;
+}
+
+@media (max-width: $width-tablet - 1) {
+
+  .additional {
+    width: auto;
+  }
+
+  .additional__title {
+    display: none;
+  }
+
+  .additional__item {
+    margin-right: 24px;
+  }
+
+  .additional__icon {
+    margin: 0;
+  }
+}

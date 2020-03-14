@@ -1,0 +1,11 @@
+.main {
+  padding-top: 40rem;
+  padding-bottom: 40rem;
+}
+
+@media (max-width: $width-tablet - 1) {
+  .main {
+    padding-top: 32rem;
+    padding-bottom: 32rem;
+  }
+}

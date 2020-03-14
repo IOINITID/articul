@@ -1,0 +1,123 @@
+.controls {
+  display: flex;
+  margin-bottom: 40rem;
+}
+
+.controls__link {
+  display: flex;
+  align-items: center;
+  font-family: $font-default;
+  font-size: 16rem;
+  font-weight: 500;
+  font-style: inherit;
+  line-height: 1.5;
+  color: #0d87c8;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.controls__arrow {
+  display: flex;
+  align-items: center;
+  font-family: $font-default;
+  font-size: 16rem;
+  font-weight: 500;
+  font-style: inherit;
+  line-height: 1.5;
+  color: #0d87c8;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.controls__icon {
+  margin-right: 9rem;
+}
+
+.controls__icon--animate {
+  animation: rotate 1s ease-in;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.controls__info {
+  font-family: $font-default;
+  font-size: 16rem;
+  font-weight: 500;
+  font-style: inherit;
+  line-height: 1.5;
+  color: #94b0be;
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: auto;
+}
+
+.controls__title {
+  font-size: 14rem;
+  font-weight: 500;
+  font-style: inherit;
+  line-height: 1.71;
+  margin: 0;
+}
+
+.controls--mobile {
+  display: none;
+}
+
+@media (max-width: $width-desktop - 1) {
+  .controls {
+    display: flex;
+    margin-bottom: 40rem;
+  }
+
+  .controls__link {
+    display: flex;
+    align-items: center;
+    font-family: $font-default;
+    font-size: 16rem;
+    font-weight: 500;
+    font-style: inherit;
+    line-height: 1.5;
+    color: #0d87c8;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .controls__icon {
+    margin-right: 9rem;
+  }
+
+  .controls__info {
+    font-family: $font-default;
+    font-size: 16rem;
+    font-weight: 500;
+    font-style: inherit;
+    line-height: 1.5;
+    color: #94b0be;
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: $width-tablet - 1) {
+  .controls--mobile {
+    display: flex;
+    margin-bottom: 48rem;
+  }
+
+  .controls--mobile .controls__icon {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .controls__show {
+    display: none;
+  }
+}

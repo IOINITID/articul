@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>AC32D750-1CF5-4C44-B0EC-1EA26D1E9BAC</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M6.50001097,10.0977426 L9.23566646,7.66948156 C9.64870649,7.30285316 10.2807526,7.34047722 10.647381,7.75351724 C11.0140094,8.16655727 10.9763854,8.7986034 10.5633453,9.1652318 L6.11359787,13.1149793 C5.73487593,13.4511458 5.16464094,13.4511458 4.78591899,13.1149793 L0.336171525,9.1652318 C-0.0768684991,8.7986034 -0.114492555,8.16655727 0.252135844,7.75351724 C0.618764243,7.34047722 1.25081038,7.30285316 1.66385041,7.66948156 L4.50001097,10.1869543 L4.50001097,1 C4.50001097,0.44771525 4.94772622,1.24344979e-14 5.50001097,1.24344979e-14 C6.05229572,1.24344979e-14 6.50001097,0.44771525 6.50001097,1 L6.50001097,10.0977426 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/up">
+            <g id="color-/-blue-copy-4" transform="translate(3.000000, 1.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#94B0BE" fill-rule="nonzero" transform="translate(5.449758, 6.683552) rotate(180.000000) translate(-5.449758, -6.683552) " xlink:href="#path-1"></use>
+                <g mask="url(#mask-2)" fill="#94B0BE" id="Fill-1">
+                    <g transform="translate(-40.000000, -33.000000)">
+                        <polygon points="0 100 100 100 100 0 0 0"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

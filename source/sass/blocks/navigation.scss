@@ -1,0 +1,36 @@
+.navigation {
+}
+
+.navigation__list {
+  @include list-reset;
+}
+
+.navigation__item {
+  margin-bottom: 27rem;
+}
+
+.navigation__item:last-child {
+  margin-bottom: 0;
+}
+
+.navigation__link {
+  font-family: $font-default;
+  font-size: 16rem;
+  font-weight: 500;
+  font-style: inherit;
+  line-height: 1.5;
+  color: #94b0be;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navigation__link--active {
+  font-weight: 700;
+  color: #e00640;
+}
+
+@media (max-width: $width-desktop - 1) {
+  .navigation {
+    display: none;
+  }
+}

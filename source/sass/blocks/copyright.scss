@@ -1,0 +1,31 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__info {
+  font-family: $font-default;
+  font-size: 14rem;
+  font-weight: 400;
+  font-style: inherit;
+  line-height: 1.71;
+  color: rgba($color: #ffffff, $alpha: 0.5);
+  margin: 0;
+  margin-right: 30rem;
+}
+
+.copyright__icon {
+  width: 28rem;
+  height: 25rem;
+}
+
+@media (max-width: $width-tablet - 1) {
+  .copyright__mobile {
+    display: block;
+  }
+
+  .copyright__info {
+    margin-right: auto;
+  }
+
+}

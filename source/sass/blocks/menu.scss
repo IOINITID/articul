@@ -1,0 +1,54 @@
+.menu__wrapper {
+  display: flex;
+}
+
+.menu__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  max-width: 203rem;
+}
+
+.menu__list:first-child {
+  margin-right: 30rem;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+}
+
+.menu__link {
+  font-family: $font-default;
+  font-size: 14rem;
+  font-weight: 400;
+  font-style: inherit;
+  line-height: 1.71;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu__icon {
+  position: absolute;
+  top: 50%;
+  left: -35px;
+  transform: translateY(-50%);
+
+  display: none;
+}
+
+@media (max-width: $width-tablet - 1) {
+  .menu__wrapper {
+    flex-direction: column;
+  }
+
+  .menu__list {
+    max-width: unset;
+  }
+
+  .menu__list:first-child {
+    margin: 0;
+  }
+}

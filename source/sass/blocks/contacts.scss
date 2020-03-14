@@ -1,0 +1,44 @@
+.contacts {
+  width: auto;
+}
+
+.contacts__list {
+  @include list-reset;
+}
+
+.contacts__item {
+  font-family: $font-default;
+  font-size: 16rem;
+  font-weight: 400;
+  font-style: inherit;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+  text-decoration: none;
+  margin-bottom: 8rem;
+}
+
+.contacts__item:last-child {
+  margin-bottom: 0;
+}
+
+.contacts__address {
+  font-style: inherit;
+}
+
+.contacts__mail {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contacts__tel {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: $width-tablet - 1) {
+  .contacts__item {
+    font-size: 14rem;
+    line-height: 1.71;
+  }
+}

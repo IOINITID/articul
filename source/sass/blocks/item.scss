@@ -1,0 +1,57 @@
+.item__content {
+  padding: 32rem 38rem 32rem 32rem;
+}
+
+.item__title {
+  font-family: $font-default;
+  font-size: 18rem;
+  font-weight: 500;
+  font-style: inherit;
+  line-height: 1.33;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 8rem;
+}
+
+.item__description {
+  font-family: $font-default;
+  font-size: 14rem;
+  font-weight: 400;
+  font-style: inherit;
+  line-height: 1.71;
+  color: #000000;
+  margin: 0;
+}
+
+@media (max-width: $width-desktop - 1) {
+  .item__content {
+    padding: 25rem 32rem 25rem 32rem;
+  }
+
+  .item__title {
+    font-family: $font-default;
+    font-size: 16rem;
+    font-weight: 500;
+    font-style: inherit;
+    line-height: 1.5;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 8rem;
+  }
+
+  .item__description {
+    font-family: $font-default;
+    font-size: 13rem;
+    font-weight: 400;
+    font-style: inherit;
+    line-height: 1.85;
+    color: #000000;
+    margin: 0;
+  }
+}
+
+@media (max-width: $width-tablet - 1) {
+  .item__content {
+    padding: 20rem;
+  }
+}

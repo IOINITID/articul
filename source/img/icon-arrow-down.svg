@@ -10,8 +10,5 @@
                   <use xlink:href="#a" />
                 </mask>
                 <use fill="#0d87c8" fill-rule="nonzero" xlink:href="#a" />
-                <g fill="#0d87c8" mask="url(#b)">
-                  <path d="M-39 67H61V-33H-39z" />
-                </g>
               </g>
             </svg>

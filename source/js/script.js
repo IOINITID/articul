@@ -298,9 +298,9 @@ var onDOMLoading = function () {
 
 // Slider destroying
 var checkDeviceWidth = function () {
-  if (deviceWidth >= 768 && deviceWidth < 1380) {
+  if (deviceWidth >= 768 && deviceWidth < 1366) {
     setRootSize(getTabletRootSize());
-  } else if (deviceWidth >= 1380) {
+  } else if (deviceWidth >= 1366) {
     setRootSize(getDesktopRootSize());
   } else {
     setRootSize(getMobileRootSize());

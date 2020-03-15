@@ -19,7 +19,7 @@
   font-weight: 700;
   font-style: inherit;
   line-height: 1.78;
-  color: #1d1d1d;
+  color: $text-info;
   margin: 0;
   margin-bottom: 8rem;
 }
@@ -30,7 +30,7 @@
   font-weight: 400;
   font-style: inherit;
   line-height: 1.71;
-  color: #000000;
+  color: $text-default;
   margin: 0;
 }
 
@@ -64,7 +64,7 @@
     font-weight: 700;
     font-style: inherit;
     line-height: 1.5;
-    color: #1d1d1d;
+    color: $text-info;
     margin: 0;
     margin-bottom: 9rem;
   }
@@ -75,7 +75,7 @@
     font-weight: 400;
     font-style: inherit;
     line-height: 1.85;
-    color: #000000;
+    color: $text-default;
     margin: 0;
   }
 

@@ -11,7 +11,7 @@
   font-weight: 500;
   font-style: inherit;
   line-height: 1.5;
-  color: #0d87c8;
+  color: $text-controls;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -24,12 +24,14 @@
   font-weight: 500;
   font-style: inherit;
   line-height: 1.5;
-  color: #0d87c8;
+  color: $text-controls;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .controls__icon {
+  min-width: 16rem;
+  max-width: 16rem;
   margin-right: 9rem;
 }
 
@@ -41,6 +43,7 @@
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -52,7 +55,7 @@
   font-weight: 500;
   font-style: inherit;
   line-height: 1.5;
-  color: #94b0be;
+  color: $text-controls-info;
   text-transform: uppercase;
   margin: 0;
   margin-left: auto;
@@ -84,12 +87,13 @@
     font-weight: 500;
     font-style: inherit;
     line-height: 1.5;
-    color: #0d87c8;
+    color: $text-controls;
     text-transform: uppercase;
     text-decoration: none;
   }
 
   .controls__icon {
+    height: 16rem;
     margin-right: 9rem;
   }
 
@@ -99,10 +103,14 @@
     font-weight: 500;
     font-style: inherit;
     line-height: 1.5;
-    color: #94b0be;
+    color: $text-controls-info;
     text-transform: uppercase;
     margin: 0;
     margin-left: auto;
+  }
+
+  .controls--mobile {
+    display: none;
   }
 }
 

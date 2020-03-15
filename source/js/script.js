@@ -3,6 +3,7 @@
 var itemsList = document.querySelectorAll('.section__list');
 var sections = document.querySelectorAll('.section');
 
+// Подгрузка карточек
 sections.forEach(function (item) {
   var itemsList = item.querySelector('.section__list');
   var items = item.querySelectorAll('.section__item');
@@ -89,6 +90,7 @@ sections.forEach(function (item) {
   }
 });
 
+// Ввод в поле формы
 var formInput = document.querySelector('.form__input');
 
 // Обработчик фокуса на поле ввода
@@ -101,6 +103,7 @@ formInput.addEventListener('focusout', function () {
   formInput.setAttribute('placeholder', 'Подпишитесь на рассылку новостей');
 });
 
+// Скролинг страницы
 var leading = document.querySelector('.navigation__link--leading');
 var organizations = document.querySelector('.navigation__link--organizations');
 var institutes = document.querySelector('.navigation__link--institutes');
@@ -195,7 +198,9 @@ var sectionVisible = function (target) {
   }
 };
 
-var desktopWidth = 1310;
+var desktopWidth = 1380;
+var tabletWidth = 768;
+var mobileWidth = 320;
 
 // Подключение фиксированной позиции
 if (innerWidth >= desktopWidth) {
@@ -228,7 +233,7 @@ var controlArrow = document.querySelector('.controls__arrow');
 var controlArrowTitle = document.querySelector('.controls__arrow .controls__title');
 var controlArrowIcon = document.querySelector('.controls__arrow .controls__icon');
 
-if (sectionDescription.clientHeight > 216) {
+if (window.innerWidth < tabletWidth && sectionDescription.clientHeight > 216) {
   sectionsInfo.forEach(function (item) {
     item.style.display = 'none';
   });
@@ -258,3 +263,48 @@ controlArrow.addEventListener('click', function (evt) {
     isActive = true;
   }
 });
+
+
+var deviceWidth = window.innerWidth;
+var htmlItem = document.querySelector('html');
+
+// Get desktop root size
+var getDesktopRootSize = function () {
+  var rootSize = deviceWidth / desktopWidth;
+  return rootSize;
+};
+
+// Get desktop root size
+var getTabletRootSize = function () {
+  var rootSize = deviceWidth / tabletWidth;
+  return rootSize;
+};
+
+// Get mobile root size
+var getMobileRootSize = function () {
+  var rootSize = deviceWidth / mobileWidth;
+  return rootSize;
+};
+
+// Set root size
+var setRootSize = function (rootFontSize) {
+  htmlItem.style.fontSize = rootFontSize + 'px';
+}
+
+// Start state for document on loading
+var onDOMLoading = function () {
+  checkDeviceWidth();
+};
+
+// Slider destroying
+var checkDeviceWidth = function () {
+  if (deviceWidth >= 768 && deviceWidth < 1380) {
+    setRootSize(getTabletRootSize());
+  } else if (deviceWidth >= 1380) {
+    setRootSize(getDesktopRootSize());
+  } else {
+    setRootSize(getMobileRootSize());
+  }
+};
+
+document.addEventListener('DOMContentLoaded', onDOMLoading);

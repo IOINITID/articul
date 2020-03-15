@@ -3,6 +3,7 @@
   display: flex;
   width: 425rem;
   margin-left: auto;
+  white-space: nowrap;
 }
 
 .additional__item {
@@ -23,12 +24,24 @@
   font-style: inherit;
   font-weight: 500;
   line-height: 3.69;
-  color: #000000;
+  color: $text-default;
   text-decoration: none;
 }
 
 .additional__icon {
   margin-right: 16rem;
+}
+
+.additional__icon--user {
+  min-width: 22rem;
+  max-width: 22rem;
+  height: 19rem;
+}
+
+.additional__icon--date {
+  min-width: 20rem;
+  max-width: 20rem;
+  height: 20rem;
 }
 
 .additional__title {

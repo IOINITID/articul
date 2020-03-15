@@ -14,16 +14,16 @@
   font-weight: 400;
   font-style: inherit;
   line-height: 1.5;
-  color: #ffffff;
+  color: $text-additional;
   background: none;
   border: none;
   width: 100%;
   height: 40rem;
-  border-bottom: 1rem solid rgba($color: #ffffff, $alpha: 0.4);
+  border-bottom: 1rem solid rgba($color: $text-additional, $alpha: 0.4);
 }
 
 .form__input::placeholder {
-  color: #ffffff;
+  color: $text-additional;
 }
 
 .form__button {
@@ -34,11 +34,21 @@
   border-radius: 50%;
   padding: 0;
   margin-left: 7rem;
+  cursor: pointer;
 }
 
 .form__button-icon {
   width: 100%;
   height: 100%;
+}
+
+.form__button-icon:hover rect,
+.form__button-icon:focus rect {
+  fill: #32bdf2;
+}
+
+.form__button-icon:active rect {
+  fill: #008abf;
 }
 
 @media (max-width: $width-tablet - 1) {

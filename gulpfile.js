@@ -55,16 +55,6 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("slick", function () {
-  return gulp.src([
-      "source/slick/*",
-      "source/slick/*/**",
-    ], {
-      base: "source"
-    })
-    .pipe(gulp.dest("build"));
-});
-
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([
@@ -82,7 +72,7 @@ gulp.task("images", function () {
       imagemin.jpegtran({
         progressive: true
       }),
-      imagemin.svgo()
+      // imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"));
 });
@@ -109,7 +99,6 @@ gulp.task("js", function () {
 
 gulp.task("sprite", function () {
   return gulp.src([
-      "source/img/logo.svg",
       "source/img/icon-*.svg"
     ])
     .pipe(svgstore({
@@ -130,10 +119,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "cssmin"));
-  // gulp.watch(["source/img/logo.svg", "source/img/icon-*.svg"], gulp.series("sprite", "refresh"));
   gulp.watch("source/*.html").on("change", gulp.series("html", "refresh"));
   gulp.watch("source/js/*.js").on("change", gulp.series("js", "copy", "refresh"));
 });
-// gulp.task("build", gulp.series("clean", "css", "cssmin", "js", "copy", "slick", "sprite", "html", "webp", "images"));
-gulp.task("build", gulp.series("clean", "css", "cssmin", "js", "copy", "slick", "html", "webp", "images"));
+gulp.task("build", gulp.series("clean", "css", "cssmin", "js", "copy", "sprite", "html", "webp", "images"));
 gulp.task("start", gulp.series("build", "server"));

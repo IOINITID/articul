@@ -4,6 +4,16 @@ $font-default: "Montserrat", "Arial", sans-serif;
 // Colors: Text colors
 $text-default: #000000;
 $text-additional: #ffffff;
+$text-controls: #0d87c8;
+$text-controls-info: #94b0be;
+$text-figures: #94b0be;
+$text-info: #1d1d1d;
+$text-logo: #e00640;
+$text-logo-special: #151f6d;
+$text-navigation: #94b0be;
+$text-navigation-active: #e00640;
+$text-promo-link: #94b0be;
+$text-promo-title: #151f6d;
 
 // Colors: Buttons colors
 $button-default: #000000;
@@ -11,9 +21,11 @@ $button-default: #000000;
 // Colors: Backgrounds colors
 $background-default: #ffffff;
 $background-shadow: #000000;
+$background-footer: #151f6d;
 
 // Colors: Border color
 $border-default: #000000;
+$border-section: #e8e8e9;
 
 // Media width
 $width-desktop: 1380px;

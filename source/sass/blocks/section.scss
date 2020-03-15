@@ -9,7 +9,7 @@
   font-weight: 700;
   font-style: inherit;
   line-height: 1.18;
-  color: #000000;
+  color: $text-default;
   margin: 0;
   margin-bottom: 32rem;
 }
@@ -20,7 +20,7 @@
   font-weight: 400;
   font-style: inherit;
   line-height: 1.71;
-  color: #000000;
+  color: $text-default;
   margin: 0;
   margin-bottom: 64rem;
 }
@@ -40,7 +40,7 @@
 .section__item {
   width: 390rem;
   height: auto;
-  border: solid 1rem #e8e8e9;
+  border: solid 1rem $border-section;
   margin-right: 30rem;
   margin-bottom: 30rem;
 }
@@ -69,7 +69,7 @@
     font-weight: 700;
     font-style: inherit;
     line-height: 1.19;
-    color: #000000;
+    color: $text-default;
     margin: 0;
     margin-bottom: 24rem;
   }
@@ -80,7 +80,7 @@
     font-weight: 400;
     font-style: inherit;
     line-height: 1.85;
-    color: #000000;
+    color: $text-default;
     margin: 0;
     margin-bottom: 56rem;
   }
@@ -95,7 +95,7 @@
   .section__item {
     width: 320rem;
     height: auto;
-    border: solid 1rem #e8e8e9;
+    border: solid 1rem $border-section;
     margin-right: 30rem;
     margin-bottom: 30rem;
   }

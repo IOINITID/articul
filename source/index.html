@@ -6,33 +6,54 @@
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Моя Россия - Главная</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/montserratregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratsemibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script>
+    document.createElement("picture");
+
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 
 <body>
 
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <div class="header">
 
     <div class="header__wrapper">
+
       <div class="container">
 
         <div class="header__top">
 
           <a class="logo" href="#">
-            <img class="logo__icon" src="img/logo.png" alt="">
+            <picture>
+              <source srcset="img/logo@1x.webp" srcset="img/logo@1x.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+              <img class="logo__icon" src="img/logo@1x.png" srcset="img/logo@1x.png 1x, img/logo@2x.png 2x" width="236"
+                height="157" alt="Логотип Моя Россия.">
+            </picture>
             <p class="logo__mobile"><span class="logo__mobile-special">МОЯ</span>РОССИЯ</p>
           </a>
 
           <ul class="header__list additional">
             <li class="additional__item">
-              <a class="additional__link" href="#">
-                <img class="additional__icon" src="img/if-user-plus-2561494.svg" alt="">
+              <a class="additional__link" href="#" title="Стать членом АМР">
+                <svg class="additional__icon additional__icon--user" width="22" height="19" aria-hidden="true">
+                  <use xlink:href="#icon-user"></use>
+                </svg>
                 <p class="additional__title">Стать членом АМР</p>
               </a>
             </li>
             <li class="additional__item">
-              <a class="additional__link" href="#">
-                <img class="additional__icon" src="img/if-calendar-80-px-510932.svg" alt="">
+              <a class="additional__link" href="#" title="Организовать мероприятие">
+                <svg class="additional__icon additional__icon--date" width="20" height="20" aria-hidden="true">
+                  <use xlink:href="#icon-date"></use>
+                </svg>
                 <p class="additional__title">Организовать мероприятие</p>
               </a>
             </li>
@@ -43,7 +64,9 @@
         <div class="header__promo promo">
 
           <a class="promo__link" href="#">
-            <img class="promo__icon" src="img/slide-left.svg" alt="">
+            <svg class="promo__icon" width="56" height="56" aria-hidden="true">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg>
             Камчатский край</a>
 
           <h1 class="promo__title">Отраслевая спецификация региона</h1>
@@ -51,10 +74,12 @@
           <nav class="navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a class="navigation__link navigation__link--leading navigation__link--active" href="#">Ведущие отрасли</a>
+                <a class="navigation__link navigation__link--leading navigation__link--active" href="#">Ведущие
+                  отрасли</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link navigation__link--organizations" href="#">Ассоциации и отраслевые организации </a>
+                <a class="navigation__link navigation__link--organizations" href="#">Ассоциации и отраслевые организации
+                </a>
               </li>
               <li class="navigation__item">
                 <a class="navigation__link navigation__link--institutes" href="#">Научные институты и филиалы РАН</a>
@@ -92,7 +117,12 @@
         <div class="section__info info">
 
           <div class="info__promo">
-            <img class="info__image" src="img/img-one.jpg" alt="">
+            <picture>
+              <source srcset="img/fishing@1x.webp" srcset="img/fishing@1x.webp 1x, img/fishing@2x.webp 2x"
+                type="image/webp">
+              <img class="info__image" src="img/fishing@1x.jpg" srcset="img/fishing@1x.jpg 1x, img/fishing@2x.jpg 2x"
+                width="390" height="248" alt="Ловля рыбы.">
+            </picture>
             <dl class="info__figures figures">
               <dt class="figures__title">1 563,2</dt>
               <dd class="figures__description">тонн рыбы и морепродуктов выловлено за 2018 год</dd>
@@ -126,14 +156,20 @@
           </div>
 
           <div class="info__promo">
-            <img class="info__image" src="img/img-two.jpg" alt="">
+            <picture>
+              <source srcset="img/farming@1x.webp 1x, img/farming@2x.webp 2x" type="image/webp">
+              <img class="info__image" src="img/farming@1x.jpg" srcset="img/farming@1x.jpg 1x, img/farming@2x.jpg 2x"
+                width="390" height="248" alt="Сельское хозяйство.">
+            </picture>
           </div>
 
         </div>
 
         <div class="controls controls--mobile">
-          <a class="controls__arrow" href="#">
-            <img class="controls__icon" src="img/down.svg" alt="">
+          <a class="controls__arrow" href="#" title="Кнопка читать далее.">
+            <svg class="controls__icon" width="16" height="16" aria-hidden="true">
+              <use xlink:href="#icon-arrow-down"></use>
+            </svg>
             <p class="controls__title">Читать дальше</p>
           </a>
         </div>
@@ -150,7 +186,12 @@
 
           <li class="section__item">
             <article class="item">
-              <img class="item__image" src="img/organization-one.jpg" alt="">
+              <picture>
+                <source srcset="img/organization-first@1x.webp 1x, img/organization-first@2x.webp 2x" type="image/webp">
+                <img class="item__image" src="img/organization-first@1x.jpg"
+                  srcset="img/organization-first@1x.jpg 1x, img/organization-first@2x.jpg 2x" width="390" height="210"
+                  alt="Логотип Камчатский моторо-тракторный завода.">
+              </picture>
               <div class="item__content">
                 <h3 class="item__title">Камчатский моторо-тракторный завод</h3>
                 <p class="item__description">Ведущий многопрофильный производитель изделий высокоточного приборо- и
@@ -162,77 +203,13 @@
 
           <li class="section__item">
             <article class="item">
-              <img class="item__image" src="img/organization-two.jpg" alt="">
-              <div class="item__content">
-                <h3 class="item__title">ВПО Точмаш</h3>
-                <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
-                  войны в соответствии с
-                  постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
-                  года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
-                  заставой.</p>
-              </div>
-            </article>
-          </li>
-
-          <li class="section__item">
-            <article class="item">
-              <img class="item__image" src="img/organization-two.jpg" alt="">
-              <div class="item__content">
-                <h3 class="item__title">ВПО Точмаш</h3>
-                <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
-                  войны в соответствии с
-                  постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
-                  года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
-                  заставой.</p>
-              </div>
-            </article>
-          </li>
-
-          <li class="section__item">
-            <article class="item">
-              <img class="item__image" src="img/organization-two.jpg" alt="">
-              <div class="item__content">
-                <h3 class="item__title">ВПО Точмаш</h3>
-                <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
-                  войны в соответствии с
-                  постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
-                  года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
-                  заставой.</p>
-              </div>
-            </article>
-          </li>
-
-          <li class="section__item">
-            <article class="item">
-              <img class="item__image" src="img/organization-two.jpg" alt="">
-              <div class="item__content">
-                <h3 class="item__title">ВПО Точмаш</h3>
-                <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
-                  войны в соответствии с
-                  постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
-                  года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
-                  заставой.</p>
-              </div>
-            </article>
-          </li>
-
-          <li class="section__item">
-            <article class="item">
-              <img class="item__image" src="img/organization-two.jpg" alt="">
-              <div class="item__content">
-                <h3 class="item__title">ВПО Точмаш</h3>
-                <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
-                  войны в соответствии с
-                  постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
-                  года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
-                  заставой.</p>
-              </div>
-            </article>
-          </li>
-
-          <li class="section__item">
-            <article class="item">
-              <img class="item__image" src="img/organization-two.jpg" alt="">
+              <picture>
+                <source srcset="img/organization-second@1x.webp 1x, img/organization-second@2x.webp 2x"
+                  type="image/webp">
+                <img class="item__image" src="img/organization-second@1x.jpg"
+                  srcset="img/organization-second@1x.jpg 1x, img/organization-second@2x.jpg 2x" width="390" height="210"
+                  alt="Логотип ВПО Точмаш.">
+              </picture>
               <div class="item__content">
                 <h3 class="item__title">ВПО Точмаш</h3>
                 <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
@@ -247,12 +224,14 @@
         </ul>
 
         <div class="controls">
-          <a class="controls__link" href="#">
-            <img class="controls__icon" src="img/load.svg" alt="">
+          <a class="controls__link" href="#" title="Кнопка посмотреть ещё.">
+            <svg class="controls__icon" width="16" height="16" aria-hidden="true">
+              <use xlink:href="#icon-preload"></use>
+            </svg>
             <p class="controls__title">Посмотреть ещё</p>
           </a>
-          <p class="controls__info"><span class="controls__show">Показано</span> <span class="controls__from">2</span> из <span
-              class="controls__to">7</span></p>
+          <p class="controls__info"><span class="controls__show">Показано</span> <span class="controls__from">2</span>
+            из <span class="controls__to">7</span></p>
         </div>
 
       </div>
@@ -267,7 +246,12 @@
 
           <li class="section__item">
             <article class="item">
-              <img class="item__image" src="img/institutes-one.jpg" alt="">
+              <picture>
+                <source srcset="img/institutes-first@1x.webp 1x, img/institutes-first@2x.webp 2x">
+                <img class="item__image" src="img/institutes-first@1x.jpg"
+                  srcset="img/institutes-first@1x.jpg 1x, img/institutes-first@2x.jpg 2x" width="390" height="210"
+                  alt="Логотип Дальневосточный федеральный университета.">
+              </picture>
               <div class="item__content">
                 <h3 class="item__title">Дальневосточный федеральный университет</h3>
                 <p class="item__description">Университет ведёт свою историю от Восточного института — первого высшего
@@ -280,7 +264,12 @@
 
           <li class="section__item">
             <article class="item">
-              <img class="item__image" src="img/institutes-two.jpg" alt="">
+              <picture>
+                <source srcset="img/institutes-second@1x.webp 1x, img/institutes-second@2x.webp 2x">
+                <img class="item__image" src="img/institutes-second@1x.jpg"
+                  srcset="img/institutes-second@1x.jpg 1x, img/institutes-second@2x.jpg 2x" width="390" height="210"
+                  alt="Логотип Тихоокеанский институт географии дальневосточного отделения РАН.">
+              </picture>
               <div class="item__content">
                 <h3 class="item__title">Тихоокеанский институт географии дальневосточного отделения РАН</h3>
                 <p class="item__description">Региональное отделение Российской академии наук, которое является развитой
@@ -291,41 +280,17 @@
             </article>
           </li>
 
-          <li class="section__item">
-            <article class="item">
-              <img class="item__image" src="img/institutes-one.jpg" alt="">
-              <div class="item__content">
-                <h3 class="item__title">Дальневосточный федеральный университет</h3>
-                <p class="item__description">Университет ведёт свою историю от Восточного института — первого высшего
-                  учебного заведения на
-                  Дальнем Востоке и является центром образования и науки на Востоке России. Включает 9 школ, 110
-                  академических департаментов и кафедр, 8 филиалов (в том числе один зарубежный — в Японии).</p>
-              </div>
-            </article>
-          </li>
-
-          <li class="section__item">
-            <article class="item">
-              <img class="item__image" src="img/institutes-one.jpg" alt="">
-              <div class="item__content">
-                <h3 class="item__title">Дальневосточный федеральный университет</h3>
-                <p class="item__description">Университет ведёт свою историю от Восточного института — первого высшего
-                  учебного заведения на
-                  Дальнем Востоке и является центром образования и науки на Востоке России. Включает 9 школ, 110
-                  академических департаментов и кафедр, 8 филиалов (в том числе один зарубежный — в Японии).</p>
-              </div>
-            </article>
-          </li>
-
         </ul>
 
         <div class="controls">
-          <a class="controls__link" href="#">
-            <img class="controls__icon" src="img/load.svg" alt="">
+          <a class="controls__link" href="#" title="Кнопка посмотреть ещё.">
+            <svg class="controls__icon" width="16" height="16" aria-hidden="true">
+              <use xlink:href="#icon-preload"></use>
+            </svg>
             <p class="controls__title">Посмотреть ещё</p>
           </a>
-          <p class="controls__info"><span class="controls__show">Показано</span> <span class="controls__from">2</span> из <span
-              class="controls__to">4</span></p>
+          <p class="controls__info"><span class="controls__show">Показано</span> <span class="controls__from">2</span>
+            из <span class="controls__to">4</span></p>
         </div>
 
       </div>
@@ -336,87 +301,101 @@
   <footer class="footer" id="footer">
     <div class="container">
 
-      <div class="footer__contacts">
+      <div class="footer__wrapper">
 
-        <div class="socials">
-          <p class="socials__title">Мы в социальных сетях</p>
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a class="socials__link" href="#">
-                <img class="social__icon social__icon--fb" src="img/fb.svg" alt="">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link" href="#">
-                <img class="social__icon social__icon--vk" src="img/vk.svg" alt="">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link" href="#">
-                <img class="social__icon social__icon--ok" src="img/ok.svg" alt="">
-              </a>
-            </li>
-          </ul>
+        <div class="footer__contacts">
+
+          <div class="socials">
+            <p class="socials__title">Мы в социальных сетях</p>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link" href="#" target="_blank" title="Мы в Fb.">
+                  <svg class="social__icon social__icon--fb" width="48" height="48" aria-hidden="true">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link" href="#" target="_blank" title="Мы в Vk.">
+                  <svg class="social__icon social__icon--vk" width="48" height="48" aria-hidden="true">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link" href="#" target="_blank" title="Мы в Ok.">
+                  <svg class="social__icon social__icon--ok" width="48" height="48" aria-hidden="true">
+                    <use xlink:href="#icon-ok"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <address class="contacts__address">Москва, Цветочный бульвар, 13</address>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__mail" href="mailto:info@myrussia.ru">info@myrussia.ru</a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__tel" href="tel:+74953339112">+7 (495) 333 91 12</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
-        <div class="contacts">
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <address class="contacts__address">Москва, Цветочный бульвар, 13</address>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__mail" href="mailto:info@myrussia.ru">info@myrussia.ru</a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__tel" href="tel:+74953339112">+7 (495) 333 91 12</a>
-            </li>
-          </ul>
-        </div>
+        <div class="footer__menu menu">
 
-      </div>
+          <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+            <label class="form__label" for="email-field">
+              <input class="form__input" type="email" name="email" id="email-field"
+                placeholder="Подпишитесь на рассылку новостей">
+            </label>
+            <button class="form__button" type="submit">
+              <svg class="form__button-icon" width="40" height="40" aria-hidden="true">
+                <use xlink:href="#icon-send"></use>
+              </svg>
+            </button>
+          </form>
 
-      <div class="footer__menu menu">
+          <div class="menu__wrapper">
 
-        <form class="form" action="https://echo.htmlacademy.ru" method="POST">
-          <label class="form__label" for="email-field">
-            <input class="form__input" type="email" name="email" id="email-field"
-              placeholder="Подпишитесь на рассылку новостей">
-          </label>
-          <button class="form__button" type="submit">
-            <img class="form__button-icon" src="img/form-send.svg" alt="">
-          </button>
-        </form>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Календарь событий</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Пресс-центр</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Регионы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Стать членом ассоциации</a>
+              </li>
+            </ul>
 
-        <div class="menu__wrapper">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  <svg class="menu__icon" width="26" height="26" aria-hidden="true">
+                    <use xlink:href="#icon-account"></use>
+                  </svg>
+                  Личный кабинет</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">О «МОЯ РОССИЯ»</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">FAQ</a>
+              </li>
+            </ul>
 
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Календарь событий</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Пресс-центр</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Регионы</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Стать членом ассоциации</a>
-            </li>
-          </ul>
-
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                <img class="menu__icon" src="img/if-misc-user-1276843-copy.svg" alt="">
-                Личный кабинет</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">О «МОЯ РОССИЯ»</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">FAQ</a>
-            </li>
-          </ul>
+          </div>
 
         </div>
 
@@ -424,12 +403,18 @@
 
       <div class="footer__copyright copyright">
         <p class="copyright__info"><span class="copyright__mobile">Copyright</span> © Ассоциация «Моя Россия»</p>
-        <img class="copyright__icon" src="img/rating.svg" alt="">
+        <svg class="copyright__icon" width="28" height="25" aria-hidden="true">
+          <use xlink:href="#icon-copyright"></use>
+        </svg>
       </div>
 
     </div>
   </footer>
 
+  <script src="js/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+  </script>
   <script src="js/script.min.js"></script>
 </body>
 

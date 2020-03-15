@@ -2,7 +2,7 @@
 
 ------------
 
-Главная страница: 🖥️ https://ioinitid.github.io/articul/index.html
+Главная страница: 🖥️ https://ioinitid.github.io/articul-preview/
 
 ------------
 

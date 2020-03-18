@@ -64,23 +64,25 @@ sections.forEach(function (item) {
       setTimeout(function () {
         showItems(startCounter);
         controlIcon.classList.remove('controls__icon--animate');
+
+        if (items.length > startCounter) {
+          controlFromTitle.textContent = startCounter + 1;
+        } else {
+          controlFromTitle.textContent = items.length;
+        }
+
+        if (items.length <= startCounter + 1) {
+          controlButtonTitle.textContent = 'Скрыть';
+          toggler = false;
+        }
+
       }, 1000);
 
-      if (items.length > startCounter) {
-        controlFromTitle.textContent = startCounter + 1;
-      } else {
-        controlFromTitle.textContent = items.length;
-      }
-
-      if (items.length <= startCounter + 1) {
-        controlButtonTitle.textContent = 'Скрыть';
-        toggler = false;
-      }
-
     } else {
-      controlButtonTitle.textContent = 'Посмотреть ещё';
-      hideItems(1);
-      toggler = true;
+        controlButtonTitle.textContent = 'Посмотреть ещё';
+        hideItems(1);
+        toggler = true;
+        window.location.href = '#' + item.id
     }
 
   };
@@ -266,7 +268,7 @@ controlArrow.addEventListener('click', function (evt) {
 
 
 var deviceWidth = window.innerWidth;
-var htmlItem = document.querySelector('html');
+// var htmlItem = document.querySelector('html');
 
 // Get desktop root size
 var getDesktopRootSize = function () {

@@ -187,6 +187,11 @@ var sectionVisible = function (target) {
         clearActiveState();
         institutes.classList.toggle('navigation__link--active');
         break;
+      case 'footer':
+        clearActiveState();
+        document.querySelector('.promo').style.position = 'unset';
+        document.querySelector('.logo__icon').style.position = 'unset';
+        break;
       default:
         break;
     }
@@ -208,10 +213,12 @@ if (innerWidth >= desktopWidth) {
     sectionVisible(leadingId);
     sectionVisible(organizationsId);
     sectionVisible(institutesId);
+    sectionVisible(footerId);
   });
   sectionVisible(leadingId);
   sectionVisible(organizationsId);
   sectionVisible(institutesId);
+  sectionVisible(footerId);
 }
 
 var sectionDescription = document.querySelector('.section__description');

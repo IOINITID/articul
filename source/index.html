@@ -13,8 +13,10 @@
   <link rel="preload" href="fonts/montserratsemibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <script>
     document.createElement("picture");
+
   </script>
-  <script src="js/picturefill.min.js" async></script> <!-- Исключительно для поддержки в не поддерживаемых браузерах IE 11 -->
+  <script src="js/picturefill.min.js" async></script>
+  <!-- Исключительно для поддержки в не поддерживаемых браузерах IE 11 -->
 </head>
 
 <body>
@@ -23,363 +25,389 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <div class="header">
-    <div class="header__wrapper">
+  <div class="wrapper">
+
+    <div class="header">
+
       <div class="container">
-        <div class="header__top">
-          <a class="logo" href="#">
-            <picture>
-              <source srcset="img/logo@1x.webp" srcset="img/logo@1x.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-              <img class="logo__icon" src="img/logo@1x.png" srcset="img/logo@1x.png 1x, img/logo@2x.png 2x" width="236"
-                height="157" alt="Логотип Моя Россия.">
-            </picture>
-            <p class="logo__mobile"><span class="logo__mobile-special">МОЯ</span>РОССИЯ</p>
-          </a>
-          <ul class="header__list additional">
-            <li class="additional__item">
-              <a class="additional__link" href="#" title="Стать членом АМР">
-                <svg class="additional__icon additional__icon--user" width="22" height="19" aria-hidden="true">
-                  <use xlink:href="#icon-user"></use>
-                </svg>
-                <p class="additional__title">Стать членом АМР</p>
-              </a>
-            </li>
-            <li class="additional__item">
-              <a class="additional__link" href="#" title="Организовать мероприятие">
-                <svg class="additional__icon additional__icon--date" width="20" height="20" aria-hidden="true">
-                  <use xlink:href="#icon-date"></use>
-                </svg>
-                <p class="additional__title">Организовать мероприятие</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="header__promo promo">
-          <a class="promo__link" href="#">
-            <svg class="promo__icon" width="56" height="56" aria-hidden="true">
-              <use xlink:href="#icon-arrow-left"></use>
-            </svg>
-            Камчатский край</a>
-          <h1 class="promo__title">Отраслевая спецификация региона</h1>
-          <nav class="navigation">
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <a class="navigation__link navigation__link--leading navigation__link--active" href="#">Ведущие
-                  отрасли</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link navigation__link--organizations" href="#">Ассоциации и отраслевые организации
+
+        <div class="header__wrapper">
+
+          <div class="header__top">
+            <a class="logo" href="#">
+              <picture>
+                <source srcset="img/logo@1x.webp" srcset="img/logo@1x.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+                <img class="logo__icon" src="img/logo@1x.png" srcset="img/logo@1x.png 1x, img/logo@2x.png 2x"
+                  width="236" height="157" alt="Логотип Моя Россия.">
+              </picture>
+              <p class="logo__mobile"><span class="logo__mobile-special">МОЯ</span>РОССИЯ</p>
+            </a>
+            <ul class="header__list additional">
+              <li class="additional__item">
+                <a class="additional__link" href="#" title="Стать членом АМР">
+                  <svg class="additional__icon additional__icon--user" width="22" height="19" aria-hidden="true">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                  <p class="additional__title">Стать членом АМР</p>
                 </a>
               </li>
-              <li class="navigation__item">
-                <a class="navigation__link navigation__link--institutes" href="#">Научные институты и филиалы РАН</a>
+              <li class="additional__item">
+                <a class="additional__link" href="#" title="Организовать мероприятие">
+                  <svg class="additional__icon additional__icon--date" width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-date"></use>
+                  </svg>
+                  <p class="additional__title">Организовать мероприятие</p>
+                </a>
               </li>
             </ul>
-          </nav>
+          </div>
+
+          <div class="header__promo promo">
+            <a class="promo__link" href="#">
+              <svg class="promo__icon" width="56" height="56" aria-hidden="true">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>
+              Камчатский край</a>
+            <h1 class="promo__title">Отраслевая спецификация региона</h1>
+            <nav class="navigation">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a class="navigation__link navigation__link--leading navigation__link--active" href="#">Ведущие
+                    отрасли</a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link navigation__link--organizations" href="#">Ассоциации и отраслевые
+                    организации
+                  </a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link navigation__link--institutes" href="#">Научные институты и филиалы РАН</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
         </div>
+
       </div>
+
+      <picture>
+        <source media="(max-width: 767px)" srcset="img/promo-mobile@1x.jpg 1x, img/promo-mobile@2x.jpg 2x">
+        <source media="(max-width: 1365px)" srcset="img/promo-tablet@1x.jpg 1x, img/promo-tablet@2x.jpg 2x">
+        <img class="header__background" src="img/promo-desktop@1x.jpg" srcset="img/promo-desktop@1x.jpg 1x, img/promo-desktop@2x.jpg 2x" alt="">
+      </picture>
+
     </div>
+
+    <main class="main">
+
+      <section class="section section--leading" id="leading">
+        <div class="container">
+          <h2 class="section__title">Ведущие отрасли</h2>
+          <p class="section__description">Отраслями специализации Владимирской области выступают машиностроение,
+            химическая, легкая, стекольная,
+            пищевая промышленность. Машиностроение представлено производством тракторов и автотракторных приборов,
+            электромоторов, экскаваторов, холодильников и телевизоров, станков, радио- и медицинской техники.
+            Предприятия химической промышленности производят пластмассы, резинотехнические изделия, стекловолокно;
+            предприятия легкой промышленности — льняные ткани. Развито стекольное производство — стекло и хрусталь, а
+            также искусственный кварц. Главные промышленные центры: Владимир, Ковров, Муром, Александров, Гусь-
+            Хрустальный. В сельском хозяйстве выделяются молочное животноводство, свиноводство, птицеводство,
+            выращивание пшеницы, ржи, гречихи, картофеля. Область имеет дефицитный бюджет и дальнейшее
+            социальноэкономическое развитие ее будет осуществляться в рамках утвержденной федеральной целевой
+            программы
+            «Сокращение различий в социально-экономическом развитии регионов Российской Федерации (2002—2010 гг. и до
+            2015 года)».</p>
+          <div class="section__info info">
+            <div class="info__promo">
+              <picture>
+                <source srcset="img/fishing@1x.webp" srcset="img/fishing@1x.webp 1x, img/fishing@2x.webp 2x"
+                  type="image/webp">
+                <img class="info__image" src="img/fishing@1x.jpg" srcset="img/fishing@1x.jpg 1x, img/fishing@2x.jpg 2x"
+                  width="390" height="248" alt="Ловля рыбы.">
+              </picture>
+              <dl class="info__figures figures">
+                <dt class="figures__title">1 563,2</dt>
+                <dd class="figures__description">тонн рыбы и морепродуктов выловлено за 2018 год</dd>
+              </dl>
+            </div>
+            <div class="info__text">
+              <h3 class="info__title">Рыбная промышленность</h3>
+              <p class="info__description">Рыбная промышленность, играя ведущую роль в хозяйственной структуре Камчатки,
+                имеет сложный состав и
+                многоотраслевую структуру. Кроме собственно рыбопромышленных подотраслей и производств (рыбодобыча,
+                рыбопереработка, охрана и воспроизводство рыбных ресурсов) она включает целый ряд вспомогательных и
+                обслуживающих отраслей и производств, а также элементы производственной и социальной инфраструктуры,
+                наиболее важные из которых — судоремонт, строительство, транспорт, портовое хозяйство, тарное и
+                сетеснастное
+                производство. Доля рыболовства и рыбоводства в валовом региональном продукте Камчатского края
+                составляет
+                около 20 %.</p>
+            </div>
+          </div>
+          <div class="section__info info info--reverse">
+            <div class="info__text">
+              <h3 class="info__title">Сельское хозяйство</h3>
+              <p class="info__description">Сельскохозяйственное производство представлено животноводством,
+                птицеводством,
+                производством
+                картофеля и овощей. Объём рынка молочной продукции в Камчатском крае составляет около 47 тыс. тонн, из
+                которых продукция местного производства составляет 34 %.</p>
+            </div>
+            <div class="info__promo">
+              <picture>
+                <source srcset="img/farming@1x.webp 1x, img/farming@2x.webp 2x" type="image/webp">
+                <img class="info__image" src="img/farming@1x.jpg" srcset="img/farming@1x.jpg 1x, img/farming@2x.jpg 2x"
+                  width="390" height="248" alt="Сельское хозяйство.">
+              </picture>
+            </div>
+          </div>
+          <div class="controls controls--mobile">
+            <a class="controls__arrow" href="#" title="Кнопка читать далее.">
+              <svg class="controls__icon" width="16" height="16" aria-hidden="true">
+                <use xlink:href="#icon-arrow-down"></use>
+              </svg>
+              <p class="controls__title">Читать дальше</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--organizations" id="organizations">
+        <div class="container">
+          <h2 class="section__title">Ассоциации и отраслевые<br> организации</h2>
+          <ul class="section__list">
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/organization-first@1x.webp 1x, img/organization-first@2x.webp 2x"
+                    type="image/webp">
+                  <img class="item__image" src="img/organization-first@1x.jpg"
+                    srcset="img/organization-first@1x.jpg 1x, img/organization-first@2x.jpg 2x" width="390" height="210"
+                    alt="Логотип Камчатский моторо-тракторный завода.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">Камчатский моторо-тракторный завод</h3>
+                  <p class="item__description">Ведущий многопрофильный производитель изделий высокоточного приборо- и
+                    машиностроения. Завод
+                    входит в состав Государственной корпорации по атомной энергии «Росатом».</p>
+                </div>
+              </article>
+            </li>
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/organization-second@1x.webp 1x, img/organization-second@2x.webp 2x"
+                    type="image/webp">
+                  <img class="item__image" src="img/organization-second@1x.jpg"
+                    srcset="img/organization-second@1x.jpg 1x, img/organization-second@2x.jpg 2x" width="390"
+                    height="210" alt="Логотип ВПО Точмаш.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">ВПО Точмаш</h3>
+                  <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
+                    войны в соответствии с
+                    постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
+                    года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
+                    заставой.</p>
+                </div>
+              </article>
+            </li>
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/organization-first@1x.webp 1x, img/organization-first@2x.webp 2x"
+                    type="image/webp">
+                  <img class="item__image" src="img/organization-first@1x.jpg"
+                    srcset="img/organization-first@1x.jpg 1x, img/organization-first@2x.jpg 2x" width="390" height="210"
+                    alt="Логотип Камчатский моторо-тракторный завода.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">Камчатский моторо-тракторный завод</h3>
+                  <p class="item__description">Ведущий многопрофильный производитель изделий высокоточного приборо- и
+                    машиностроения. Завод
+                    входит в состав Государственной корпорации по атомной энергии «Росатом».</p>
+                </div>
+              </article>
+            </li>
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/organization-second@1x.webp 1x, img/organization-second@2x.webp 2x"
+                    type="image/webp">
+                  <img class="item__image" src="img/organization-second@1x.jpg"
+                    srcset="img/organization-second@1x.jpg 1x, img/organization-second@2x.jpg 2x" width="390"
+                    height="210" alt="Логотип ВПО Точмаш.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">ВПО Точмаш</h3>
+                  <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
+                    войны в соответствии с
+                    постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
+                    года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
+                    заставой.</p>
+                </div>
+              </article>
+            </li>
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/organization-first@1x.webp 1x, img/organization-first@2x.webp 2x"
+                    type="image/webp">
+                  <img class="item__image" src="img/organization-first@1x.jpg"
+                    srcset="img/organization-first@1x.jpg 1x, img/organization-first@2x.jpg 2x" width="390" height="210"
+                    alt="Логотип Камчатский моторо-тракторный завода.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">Камчатский моторо-тракторный завод</h3>
+                  <p class="item__description">Ведущий многопрофильный производитель изделий высокоточного приборо- и
+                    машиностроения. Завод
+                    входит в состав Государственной корпорации по атомной энергии «Росатом».</p>
+                </div>
+              </article>
+            </li>
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/organization-second@1x.webp 1x, img/organization-second@2x.webp 2x"
+                    type="image/webp">
+                  <img class="item__image" src="img/organization-second@1x.jpg"
+                    srcset="img/organization-second@1x.jpg 1x, img/organization-second@2x.jpg 2x" width="390"
+                    height="210" alt="Логотип ВПО Точмаш.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">ВПО Точмаш</h3>
+                  <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
+                    войны в соответствии с
+                    постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
+                    года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
+                    заставой.</p>
+                </div>
+              </article>
+            </li>
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/organization-second@1x.webp 1x, img/organization-second@2x.webp 2x"
+                    type="image/webp">
+                  <img class="item__image" src="img/organization-second@1x.jpg"
+                    srcset="img/organization-second@1x.jpg 1x, img/organization-second@2x.jpg 2x" width="390"
+                    height="210" alt="Логотип ВПО Точмаш.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">ВПО Точмаш</h3>
+                  <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
+                    войны в соответствии с
+                    постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
+                    года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
+                    заставой.</p>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <div class="controls">
+            <a class="controls__link" href="#" title="Кнопка посмотреть ещё.">
+              <svg class="controls__icon" width="16" height="16" aria-hidden="true">
+                <use xlink:href="#icon-preload"></use>
+              </svg>
+              <p class="controls__title">Посмотреть ещё</p>
+            </a>
+            <p class="controls__info"><span class="controls__show">Показано</span> <span class="controls__from">2</span>
+              из <span class="controls__to">7</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--institutes" id="institutes">
+        <div class="container">
+          <h2 class="section__title">Научные институты и филиалы РАН,<br> ведущие или опорные ВУЗы</h2>
+          <ul class="section__list">
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/institutes-first@1x.webp 1x, img/institutes-first@2x.webp 2x" type="image/webp">
+                  <img class="item__image" src="img/institutes-first@1x.jpg"
+                    srcset="img/institutes-first@1x.jpg 1x, img/institutes-first@2x.jpg 2x" width="390" height="210"
+                    alt="Логотип Дальневосточный федеральный университета.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">Дальневосточный федеральный университет</h3>
+                  <p class="item__description">Университет ведёт свою историю от Восточного института — первого высшего
+                    учебного заведения на
+                    Дальнем Востоке и является центром образования и науки на Востоке России. Включает 9 школ, 110
+                    академических департаментов и кафедр, 8 филиалов (в том числе один зарубежный — в Японии).</p>
+                </div>
+              </article>
+            </li>
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/institutes-second@1x.webp 1x, img/institutes-second@2x.webp 2x" type="image/webp">
+                  <img class="item__image" src="img/institutes-second@1x.jpg"
+                    srcset="img/institutes-second@1x.jpg 1x, img/institutes-second@2x.jpg 2x" width="390" height="210"
+                    alt="Логотип Тихоокеанский институт географии дальневосточного отделения РАН.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">Тихоокеанский институт географии дальневосточного отделения РАН</h3>
+                  <p class="item__description">Региональное отделение Российской академии наук, которое является
+                    развитой
+                    территориально-распределенной системой комплексных научных центров, институтов, стационаров и
+                    научных станций, заповедников, охватывающей практически всю территорию Дальневосточного
+                    федерального округа.</p>
+                </div>
+              </article>
+            </li>
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/institutes-first@1x.webp 1x, img/institutes-first@2x.webp 2x" type="image/webp">
+                  <img class="item__image" src="img/institutes-first@1x.jpg"
+                    srcset="img/institutes-first@1x.jpg 1x, img/institutes-first@2x.jpg 2x" width="390" height="210"
+                    alt="Логотип Дальневосточный федеральный университета.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">Дальневосточный федеральный университет</h3>
+                  <p class="item__description">Университет ведёт свою историю от Восточного института — первого высшего
+                    учебного заведения на
+                    Дальнем Востоке и является центром образования и науки на Востоке России. Включает 9 школ, 110
+                    академических департаментов и кафедр, 8 филиалов (в том числе один зарубежный — в Японии).</p>
+                </div>
+              </article>
+            </li>
+            <li class="section__item">
+              <article class="item">
+                <picture>
+                  <source srcset="img/institutes-second@1x.webp 1x, img/institutes-second@2x.webp 2x" type="image/webp">
+                  <img class="item__image" src="img/institutes-second@1x.jpg"
+                    srcset="img/institutes-second@1x.jpg 1x, img/institutes-second@2x.jpg 2x" width="390" height="210"
+                    alt="Логотип Тихоокеанский институт географии дальневосточного отделения РАН.">
+                </picture>
+                <div class="item__content">
+                  <h3 class="item__title">Тихоокеанский институт географии дальневосточного отделения РАН</h3>
+                  <p class="item__description">Региональное отделение Российской академии наук, которое является
+                    развитой
+                    территориально-распределенной системой комплексных научных центров, институтов, стационаров и
+                    научных станций, заповедников, охватывающей практически всю территорию Дальневосточного
+                    федерального округа.</p>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <div class="controls">
+            <a class="controls__link" href="#" title="Кнопка посмотреть ещё.">
+              <svg class="controls__icon" width="16" height="16" aria-hidden="true">
+                <use xlink:href="#icon-preload"></use>
+              </svg>
+              <p class="controls__title">Посмотреть ещё</p>
+            </a>
+            <p class="controls__info"><span class="controls__show">Показано</span> <span class="controls__from">2</span>
+              из <span class="controls__to">4</span></p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
   </div>
-
-  <main class="main">
-
-    <section class="section section--leading" id="leading">
-      <div class="container">
-        <h2 class="section__title">Ведущие отрасли</h2>
-        <p class="section__description">Отраслями специализации Владимирской области выступают машиностроение,
-          химическая, легкая, стекольная,
-          пищевая промышленность. Машиностроение представлено производством тракторов и автотракторных приборов,
-          электромоторов, экскаваторов, холодильников и телевизоров, станков, радио- и медицинской техники.
-          Предприятия химической промышленности производят пластмассы, резинотехнические изделия, стекловолокно;
-          предприятия легкой промышленности — льняные ткани. Развито стекольное производство — стекло и хрусталь, а
-          также искусственный кварц. Главные промышленные центры: Владимир, Ковров, Муром, Александров, Гусь-
-          Хрустальный. В сельском хозяйстве выделяются молочное животноводство, свиноводство, птицеводство,
-          выращивание пшеницы, ржи, гречихи, картофеля. Область имеет дефицитный бюджет и дальнейшее
-          социальноэкономическое развитие ее будет осуществляться в рамках утвержденной федеральной целевой
-          программы
-          «Сокращение различий в социально-экономическом развитии регионов Российской Федерации (2002—2010 гг. и до
-          2015 года)».</p>
-        <div class="section__info info">
-          <div class="info__promo">
-            <picture>
-              <source srcset="img/fishing@1x.webp" srcset="img/fishing@1x.webp 1x, img/fishing@2x.webp 2x"
-                type="image/webp">
-              <img class="info__image" src="img/fishing@1x.jpg" srcset="img/fishing@1x.jpg 1x, img/fishing@2x.jpg 2x"
-                width="390" height="248" alt="Ловля рыбы.">
-            </picture>
-            <dl class="info__figures figures">
-              <dt class="figures__title">1 563,2</dt>
-              <dd class="figures__description">тонн рыбы и морепродуктов выловлено за 2018 год</dd>
-            </dl>
-          </div>
-          <div class="info__text">
-            <h3 class="info__title">Рыбная промышленность</h3>
-            <p class="info__description">Рыбная промышленность, играя ведущую роль в хозяйственной структуре Камчатки,
-              имеет сложный состав и
-              многоотраслевую структуру. Кроме собственно рыбопромышленных подотраслей и производств (рыбодобыча,
-              рыбопереработка, охрана и воспроизводство рыбных ресурсов) она включает целый ряд вспомогательных и
-              обслуживающих отраслей и производств, а также элементы производственной и социальной инфраструктуры,
-              наиболее важные из которых — судоремонт, строительство, транспорт, портовое хозяйство, тарное и
-              сетеснастное
-              производство. Доля рыболовства и рыбоводства в валовом региональном продукте Камчатского края
-              составляет
-              около 20 %.</p>
-          </div>
-        </div>
-        <div class="section__info info info--reverse">
-          <div class="info__text">
-            <h3 class="info__title">Сельское хозяйство</h3>
-            <p class="info__description">Сельскохозяйственное производство представлено животноводством, птицеводством,
-              производством
-              картофеля и овощей. Объём рынка молочной продукции в Камчатском крае составляет около 47 тыс. тонн, из
-              которых продукция местного производства составляет 34 %.</p>
-          </div>
-          <div class="info__promo">
-            <picture>
-              <source srcset="img/farming@1x.webp 1x, img/farming@2x.webp 2x" type="image/webp">
-              <img class="info__image" src="img/farming@1x.jpg" srcset="img/farming@1x.jpg 1x, img/farming@2x.jpg 2x"
-                width="390" height="248" alt="Сельское хозяйство.">
-            </picture>
-          </div>
-        </div>
-        <div class="controls controls--mobile">
-          <a class="controls__arrow" href="#" title="Кнопка читать далее.">
-            <svg class="controls__icon" width="16" height="16" aria-hidden="true">
-              <use xlink:href="#icon-arrow-down"></use>
-            </svg>
-            <p class="controls__title">Читать дальше</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--organizations" id="organizations">
-      <div class="container">
-        <h2 class="section__title">Ассоциации и отраслевые<br> организации</h2>
-        <ul class="section__list">
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/organization-first@1x.webp 1x, img/organization-first@2x.webp 2x" type="image/webp">
-                <img class="item__image" src="img/organization-first@1x.jpg"
-                  srcset="img/organization-first@1x.jpg 1x, img/organization-first@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип Камчатский моторо-тракторный завода.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">Камчатский моторо-тракторный завод</h3>
-                <p class="item__description">Ведущий многопрофильный производитель изделий высокоточного приборо- и
-                  машиностроения. Завод
-                  входит в состав Государственной корпорации по атомной энергии «Росатом».</p>
-              </div>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/organization-second@1x.webp 1x, img/organization-second@2x.webp 2x"
-                  type="image/webp">
-                <img class="item__image" src="img/organization-second@1x.jpg"
-                  srcset="img/organization-second@1x.jpg 1x, img/organization-second@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип ВПО Точмаш.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">ВПО Точмаш</h3>
-                <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
-                  войны в соответствии с
-                  постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
-                  года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
-                  заставой.</p>
-              </div>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/organization-first@1x.webp 1x, img/organization-first@2x.webp 2x" type="image/webp">
-                <img class="item__image" src="img/organization-first@1x.jpg"
-                  srcset="img/organization-first@1x.jpg 1x, img/organization-first@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип Камчатский моторо-тракторный завода.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">Камчатский моторо-тракторный завод</h3>
-                <p class="item__description">Ведущий многопрофильный производитель изделий высокоточного приборо- и
-                  машиностроения. Завод
-                  входит в состав Государственной корпорации по атомной энергии «Росатом».</p>
-              </div>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/organization-second@1x.webp 1x, img/organization-second@2x.webp 2x"
-                  type="image/webp">
-                <img class="item__image" src="img/organization-second@1x.jpg"
-                  srcset="img/organization-second@1x.jpg 1x, img/organization-second@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип ВПО Точмаш.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">ВПО Точмаш</h3>
-                <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
-                  войны в соответствии с
-                  постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
-                  года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
-                  заставой.</p>
-              </div>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/organization-first@1x.webp 1x, img/organization-first@2x.webp 2x" type="image/webp">
-                <img class="item__image" src="img/organization-first@1x.jpg"
-                  srcset="img/organization-first@1x.jpg 1x, img/organization-first@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип Камчатский моторо-тракторный завода.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">Камчатский моторо-тракторный завод</h3>
-                <p class="item__description">Ведущий многопрофильный производитель изделий высокоточного приборо- и
-                  машиностроения. Завод
-                  входит в состав Государственной корпорации по атомной энергии «Росатом».</p>
-              </div>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/organization-second@1x.webp 1x, img/organization-second@2x.webp 2x"
-                  type="image/webp">
-                <img class="item__image" src="img/organization-second@1x.jpg"
-                  srcset="img/organization-second@1x.jpg 1x, img/organization-second@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип ВПО Точмаш.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">ВПО Точмаш</h3>
-                <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
-                  войны в соответствии с
-                  постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
-                  года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
-                  заставой.</p>
-              </div>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/organization-second@1x.webp 1x, img/organization-second@2x.webp 2x"
-                  type="image/webp">
-                <img class="item__image" src="img/organization-second@1x.jpg"
-                  srcset="img/organization-second@1x.jpg 1x, img/organization-second@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип ВПО Точмаш.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">ВПО Точмаш</h3>
-                <p class="item__description">Строительство тракторного завода началось в годы Великой Отечественной
-                  войны в соответствии с
-                  постановлением Центрального Комитета ВКП(б) и Совета Народных Комиссаров СССР от 28 февраля 1943
-                  года. Местом строительства была выбрана северная окраина Владимира, район за старой Юрьевской
-                  заставой.</p>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <div class="controls">
-          <a class="controls__link" href="#" title="Кнопка посмотреть ещё.">
-            <svg class="controls__icon" width="16" height="16" aria-hidden="true">
-              <use xlink:href="#icon-preload"></use>
-            </svg>
-            <p class="controls__title">Посмотреть ещё</p>
-          </a>
-          <p class="controls__info"><span class="controls__show">Показано</span> <span class="controls__from">2</span>
-            из <span class="controls__to">7</span></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--institutes" id="institutes">
-      <div class="container">
-        <h2 class="section__title">Научные институты и филиалы РАН,<br> ведущие или опорные ВУЗы</h2>
-        <ul class="section__list">
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/institutes-first@1x.webp 1x, img/institutes-first@2x.webp 2x" type="image/webp">
-                <img class="item__image" src="img/institutes-first@1x.jpg" srcset="img/institutes-first@1x.jpg 1x, img/institutes-first@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип Дальневосточный федеральный университета.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">Дальневосточный федеральный университет</h3>
-                <p class="item__description">Университет ведёт свою историю от Восточного института — первого высшего
-                  учебного заведения на
-                  Дальнем Востоке и является центром образования и науки на Востоке России. Включает 9 школ, 110
-                  академических департаментов и кафедр, 8 филиалов (в том числе один зарубежный — в Японии).</p>
-              </div>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/institutes-second@1x.webp 1x, img/institutes-second@2x.webp 2x" type="image/webp">
-                <img class="item__image" src="img/institutes-second@1x.jpg"
-                  srcset="img/institutes-second@1x.jpg 1x, img/institutes-second@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип Тихоокеанский институт географии дальневосточного отделения РАН.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">Тихоокеанский институт географии дальневосточного отделения РАН</h3>
-                <p class="item__description">Региональное отделение Российской академии наук, которое является развитой
-                  территориально-распределенной системой комплексных научных центров, институтов, стационаров и
-                  научных станций, заповедников, охватывающей практически всю территорию Дальневосточного
-                  федерального округа.</p>
-              </div>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/institutes-first@1x.webp 1x, img/institutes-first@2x.webp 2x" type="image/webp">
-                <img class="item__image" src="img/institutes-first@1x.jpg" srcset="img/institutes-first@1x.jpg 1x, img/institutes-first@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип Дальневосточный федеральный университета.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">Дальневосточный федеральный университет</h3>
-                <p class="item__description">Университет ведёт свою историю от Восточного института — первого высшего
-                  учебного заведения на
-                  Дальнем Востоке и является центром образования и науки на Востоке России. Включает 9 школ, 110
-                  академических департаментов и кафедр, 8 филиалов (в том числе один зарубежный — в Японии).</p>
-              </div>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="item">
-              <picture>
-                <source srcset="img/institutes-second@1x.webp 1x, img/institutes-second@2x.webp 2x" type="image/webp">
-                <img class="item__image" src="img/institutes-second@1x.jpg"
-                  srcset="img/institutes-second@1x.jpg 1x, img/institutes-second@2x.jpg 2x" width="390" height="210"
-                  alt="Логотип Тихоокеанский институт географии дальневосточного отделения РАН.">
-              </picture>
-              <div class="item__content">
-                <h3 class="item__title">Тихоокеанский институт географии дальневосточного отделения РАН</h3>
-                <p class="item__description">Региональное отделение Российской академии наук, которое является развитой
-                  территориально-распределенной системой комплексных научных центров, институтов, стационаров и
-                  научных станций, заповедников, охватывающей практически всю территорию Дальневосточного
-                  федерального округа.</p>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <div class="controls">
-          <a class="controls__link" href="#" title="Кнопка посмотреть ещё.">
-            <svg class="controls__icon" width="16" height="16" aria-hidden="true">
-              <use xlink:href="#icon-preload"></use>
-            </svg>
-            <p class="controls__title">Посмотреть ещё</p>
-          </a>
-          <p class="controls__info"><span class="controls__show">Показано</span> <span class="controls__from">2</span>
-            из <span class="controls__to">4</span></p>
-        </div>
-      </div>
-    </section>
-
-  </main>
 
   <footer class="footer" id="footer">
     <div class="container">
@@ -482,6 +510,7 @@
   <script src="js/svg4everybody.min.js"></script>
   <script>
     svg4everybody();
+
   </script>
   <script src="js/script.min.js"></script>
 </body>

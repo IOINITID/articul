@@ -79,10 +79,10 @@ sections.forEach(function (item) {
       }, 1000);
 
     } else {
-        controlButtonTitle.textContent = 'Посмотреть ещё';
-        hideItems(1);
-        toggler = true;
-        window.location.href = '#' + item.id
+      controlButtonTitle.textContent = 'Посмотреть ещё';
+      hideItems(1);
+      toggler = true;
+      window.location.href = '#' + item.id
     }
 
   };
@@ -114,6 +114,8 @@ var organizationsId = document.querySelector('#organizations');
 var institutesId = document.querySelector('#institutes');
 var footerId = document.querySelector('#footer');
 
+var navigationButtons = document.querySelectorAll('.navigation__link');
+
 var clearActiveState = function () {
   leading.classList.remove('navigation__link--active');
   organizations.classList.remove('navigation__link--active');
@@ -129,7 +131,7 @@ var showActiveState = function () {
 leading.addEventListener('click', function (evt) {
   evt.preventDefault();
   leadingId.scrollIntoView({
-    block: "start",
+    block: "end",
     behavior: "smooth"
   });
 });
@@ -137,7 +139,7 @@ leading.addEventListener('click', function (evt) {
 organizations.addEventListener('click', function (evt) {
   evt.preventDefault();
   organizationsId.scrollIntoView({
-    block: "start",
+    block: "end",
     behavior: "smooth"
   });
 });
@@ -145,7 +147,7 @@ organizations.addEventListener('click', function (evt) {
 institutes.addEventListener('click', function (evt) {
   evt.preventDefault();
   institutesId.scrollIntoView({
-    block: "start",
+    block: "end",
     behavior: "smooth"
   });
 });
@@ -167,28 +169,23 @@ var sectionVisible = function (target) {
       bottom: window.pageYOffset + document.documentElement.clientHeight
     };
 
-  if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-    targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-    targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-    targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+  if (targetPosition.bottom > windowPosition.top &&
+    targetPosition.top < windowPosition.bottom &&
+    targetPosition.right > windowPosition.left &&
+    targetPosition.left < windowPosition.right) {
 
     switch (target.id) {
       case 'leading':
         clearActiveState();
-        leading.classList.add('navigation__link--active');
+        leading.classList.toggle('navigation__link--active');
         break;
       case 'organizations':
         clearActiveState();
-        organizations.classList.add('navigation__link--active');
+        organizations.classList.toggle('navigation__link--active');
         break;
       case 'institutes':
         clearActiveState();
-        institutes.classList.add('navigation__link--active');
-        break;
-      case 'footer':
-        clearActiveState();
-        document.querySelector('.promo').style.position = 'unset';
-        document.querySelector('.logo__icon').style.position = 'unset';
+        institutes.classList.toggle('navigation__link--active');
         break;
       default:
         break;
@@ -200,7 +197,7 @@ var sectionVisible = function (target) {
   }
 };
 
-var desktopWidth = 1380;
+var desktopWidth = 1440;
 var tabletWidth = 768;
 var mobileWidth = 320;
 
@@ -209,24 +206,12 @@ if (innerWidth >= desktopWidth) {
   // Обработчик события при прокрутке страницы
   window.addEventListener('scroll', function () {
     sectionVisible(leadingId);
-  });
-
-  window.addEventListener('scroll', function () {
     sectionVisible(organizationsId);
-  });
-
-  window.addEventListener('scroll', function () {
     sectionVisible(institutesId);
   });
-
-  window.addEventListener('scroll', function () {
-    sectionVisible(footerId);
-  });
-
   sectionVisible(leadingId);
   sectionVisible(organizationsId);
   sectionVisible(institutesId);
-  sectionVisible(footerId);
 }
 
 var sectionDescription = document.querySelector('.section__description');
@@ -308,5 +293,3 @@ var checkDeviceWidth = function () {
     setRootSize(getMobileRootSize());
   }
 };
-
-document.addEventListener('DOMContentLoaded', onDOMLoading);

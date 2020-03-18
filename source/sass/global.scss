@@ -36,7 +36,9 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 1440rem;
   min-height: 100%;
+  margin: 0 auto;
 }
 
 .main {
@@ -73,4 +75,10 @@ input {
 
 .show {
   display: block !important;
+}
+
+@media (max-width: $width-desktop - 1) {
+.wrapper {
+  max-width: 768rem;
+}
 }

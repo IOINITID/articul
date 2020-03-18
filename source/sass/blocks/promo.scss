@@ -1,5 +1,5 @@
 .promo {
-  max-width: 273rem;
+  max-width: 383rem;
   position: fixed;
 }
 
@@ -36,7 +36,7 @@
 @media (max-width: $width-desktop - 1) {
   .promo {
     max-width: 273rem;
-    position: unset;
+    position: unset !important;
   }
 
   .promo__link {
@@ -70,6 +70,7 @@
 }
 
 @media (max-width: $width-tablet - 1) {
+
   .promo__link {
     font-size: 14rem;
     line-height: 1.71;
@@ -84,5 +85,6 @@
   .promo__title {
     font-size: 24rem;
     line-height: 1.17;
+    margin-bottom: 24rem;
   }
 }

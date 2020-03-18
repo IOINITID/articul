@@ -1,3 +1,8 @@
+.navigation {
+  max-width: 283rem;
+
+}
+
 .navigation__list {
   @include list-reset;
 }

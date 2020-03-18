@@ -1,22 +1,16 @@
-.header__wrapper {
-  background: url("../img/promo-desktop@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 100% 94rem;
-  height: 574rem;
+.header {
   position: relative;
-  background-size: 850rem 100%;
 }
 
-@media (min-resolution: $retina-dppx),
-(min-resolution: $retina-dpi) {
-  .header__wrapper {
-    background: url("../img/promo-desktop@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: 100% 94rem;
-    height: 574rem;
-    position: relative;
-    background-size: 850rem 100%;
-  }
+.header__wrapper {
+  height: 574rem;
+}
+
+.header__background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 915rem;
 }
 
 .header__top {
@@ -27,22 +21,14 @@
 
 @media (max-width: $width-desktop - 1) {
   .header__wrapper {
-    background: url("../img/promo-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 100% 68rem;
     height: 399rem;
-    background-size: 428rem 100%;
   }
 
-  @media (min-resolution: $retina-dppx),
-  (min-resolution: $retina-dpi) {
-    .header__wrapper {
-      background: url("../img/promo-tablet@2x.jpg");
-      background-repeat: no-repeat;
-      background-position: 100% 68rem;
-      height: 399rem;
-      background-size: 428rem 100%;
-    }
+  .header__background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 428rem;
   }
 
   .header__top {
@@ -54,24 +40,14 @@
 
 @media (max-width: $width-tablet - 1) {
   .header__wrapper {
-    background: url("../img/promo-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-    background-size: contain;
-    height: 448rem;
-    background-size: contain;
+    height: auto;
   }
 
-  @media (min-resolution: $retina-dppx),
-  (min-resolution: $retina-dpi) {
-    .header__wrapper {
-      background: url("../img/promo-mobile@2x.jpg");
-      background-repeat: no-repeat;
-      background-position: 50% 100%;
-      background-size: contain;
-      height: 448rem;
-      background-size: contain;
-    }
+  .header__background {
+    position: unset;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
   }
 
   .header__top {
